@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>P2P_Chat_Application</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <script src="jquery.js"></script>
+    <script src="peer.js"></script>
+    <script src="socket.io.js"></script>
+  </head>
+  <body style="background-color: #F5F5F5;">
+    <div id="Register_div" class="text-center">
+      <div class="container col-lg-3 col-sm-6 col-md-6" style="margin-top: 100px;">
+        <img src="./logoBK.png" alt="" style="width: 100px; margin-bottom: 20px;">
+        <h2 style="color: blue;" class="mb-3">Please Sign In</h2>
+        <form action="">
+          <div class="form-group">
+            <input type="text" class="form-control" id="txtUsername" placeholder="Enter Your Username">
+          </div>
+        </form>            
+        <button class="btn btn-primary" id="btnSignUp">Sign Up</button>
+      </div>
+    </div>
+    <div class="container mt-5" id="Chat_div" >
+      <div id="left" style="width:30%; float:left; margin-top:38px;">
+        <h2 style="color: black; text-align: center;font-weight:700">Online User</h2>
+        <ul id="ulUser" style="list-style-type:none; text-align: center; font-weight:700;padding: 0px;"></ul>
+      </div>
+      <div id="right" style="width:70%; float:left;min-height: 500px;" >
+        <div id="person" style="text-align:right" class="mb-1"><img src="./people.png" alt="" style="width:5%">
+          <span id="name" style="font-weight: 700;"></span>
+          <span id="peerid" style="display:none"></span>
+        </div>
+        <div class="mb-3" id="list" style="width:100%; height:400px; background-color:#d4d1cb; padding-top: 20px; padding-left: 10px;"></div>
+        <div id="textChatBox" style="width:100%">
+          <input type="text" id="txtChat" style="width:80%" placeholder="Text Here"/>
+          <input class = "btn btn-secondary" type="button" id="btnSend" value="Send"  style="width:19%"/>
+        </div>
+        <div id="textChatBox" style="width:100%; margin-top:10px">
+            <input type="file" id="file" style="width:60%; border:solix 1px black" placeholder="Choose File"/>
+            <input class = "btn btn-secondary" type="button" id="btnSendFile" value="Send"  style="width:18%"/>
+            <input class = "btn" type="button" id="btnReceiveFile" value="Receive"  style="width:18%; background-color: blue; color: white;"/>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script src="./FileSaver.min.js"></script>
+</html>
